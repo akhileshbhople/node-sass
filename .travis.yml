@@ -13,11 +13,6 @@ jobs:
       os: linux
       before_script: npm run lint || exit 1;
       after_success: npm run-script coverage;
-    - stage: test
-      node_js: "node"
-      os: linux-ppc64le
-      before_script: npm run lint || exit 1;
-      after_success: npm run-script coverage;
     - stage: platform-test
       node_js: "node"
       os: osx
